@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <!-- EDITE AQUI: título e descrição da disciplina -->
+  <title>Laboratório de Inovação II · Stela</title>
+  <meta name="description" content="Laboratório de Inovação II: tecnologias atuais e em projeção, seminários, workshops, mesas de debate e portfólio. ADS, 2º semestre, Senac DF Taguatinga. Profa. Maristela.">
+
+  <link rel="icon" href="assets/img/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="assets/img/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <script src="assets/js/placa.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mona+Sans:wdth,wght@100..125,400..900&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,700;1,400&family=Atkinson+Hyperlegible+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="assets/css/estilo.css">
+  <link rel="stylesheet" href="assets/css/disciplina.css">
+  <link rel="stylesheet" href="assets/css/neon.css">
+  <link rel="stylesheet" href="assets/css/aula.css">
+</head>
+<body>
+
+  <!-- ===================== BARRA DO TOPO (igual em todos os sites) ===================== -->
+  <header class="barra">
+    <div class="envolve">
+      <div class="marcas">
+        <a class="marca" href="/" title="Portal da Stela">
+          <img src="assets/img/estrela.webp" alt="" width="26" height="24">
+          <span class="marca-texto">Stela</span>
+        </a>
+        <a class="marca-disc" href="./" title="Página inicial da disciplina">Lab II</a>
+      </div>
+      <button type="button" class="btn-menu" id="btn-menu" aria-expanded="false" aria-controls="menu">Menu</button>
+      <nav class="nav" id="menu" aria-label="Seções da disciplina">
+        <a href="#tema">O Radar</a>
+        <a href="#ementa">Ementa</a>
+        <a href="#aulas">Aulas</a>
+        <a href="#avaliacao">Avaliação</a>
+        <a href="#bibliografia">Bibliografia</a>
+      </nav>
+      <div class="ajustes">
+        <button type="button" id="btn-tema" aria-label="Mudar para o tema claro">
+          <svg class="sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="lua" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11Z"/></svg>
+        </button>
+        <button type="button" id="btn-fonte" aria-label="Aumentar o tamanho do texto">A+</button>
+        <button type="button" id="btn-movimento" aria-pressed="false">
+          <svg class="pausar" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+          <svg class="tocar" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5Z"/></svg>
+          <span class="rotulo">Pausar animações</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="inicio">
+
+    <!-- ===================== ABERTURA ===================== -->
+    <section class="abertura">
+      <canvas class="chuva-matrix" aria-hidden="true"></canvas>
+      <div class="envolve abertura-grade">
+        <div>
+          <p class="trilha-migalhas" data-revela>
+            <a href="/">Stela</a> <span aria-hidden="true">/</span>
+            <a href="/#cursos">ADS</a> <span aria-hidden="true">/</span>
+            <span>Laboratório de Inovação II</span>
+          </p>
+
+          <!-- EDITE AQUI: nome oficial da disciplina e o título de boas-vindas -->
+          <p class="nome-oficial etiqueta ouro" data-revela style="--i:1">Laboratório de Inovação II</p>
+          <h1 data-revela style="--i:1">Bem-vindos ao <span class="neon">radar</span> das tecnologias</h1>
+          <p class="subtitulo" data-revela style="--i:2">Investigar o que está mudando o mundo, mostrar o que descobriu e deixar tudo publicado.</p>
+          <p class="chamada" data-revela style="--i:3">
+            IA generativa, nuvem, Internet das Coisas, cibersegurança, blockchain, low-code, realidade estendida.
+            Cada grupo escolhe uma, pesquisa com método, apresenta num seminário, ensina num workshop, debate
+            os impactos e publica tudo num portfólio no GitHub Pages: o Radar de Tecnologias.
+          </p>
+
+          <div class="acoes" data-revela style="--i:4">
+            <a class="botao" href="#aulas">Ver as aulas</a>
+            <a class="botao contorno" href="#ementa">Ver a ementa</a>
+          </div>
+        </div>
+
+        <!-- EDITE AQUI: janela de boas-vindas -->
+        <div class="vitrine" data-revela style="--i:2">
+          <span class="tec logo-flutua neon-halo" title="GitHub"><img src="assets/img/tec/github.svg" alt="" width="64" height="64"></span>
+          <div class="janela">
+            <div class="janela-barra">
+              <span class="semaforo" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="janela-titulo">radar.html</span>
+            </div>
+            <pre class="codigo" aria-label="Página HTML do portfólio do Radar de Tecnologias"><code><span class="linha"><span class="num">1</span><span class="com">&lt;!-- portfólio do grupo --&gt;</span></span><span class="linha"><span class="num">2</span><span class="tag">&lt;h1&gt;</span>Radar de Tecnologias<span class="tag">&lt;/h1&gt;</span></span><span class="linha"><span class="num">3</span><span class="tag">&lt;ul&gt;</span></span><span class="linha"><span class="num">4</span>  <span class="tag">&lt;li&gt;</span>seminário<span class="tag">&lt;/li&gt;</span></span><span class="linha"><span class="num">5</span>  <span class="tag">&lt;li&gt;</span>workshop<span class="tag">&lt;/li&gt;</span></span><span class="linha"><span class="num">6</span>  <span class="tag">&lt;li&gt;</span>debates<span class="tag">&lt;/li&gt;</span></span><span class="linha"><span class="num">7</span><span class="tag">&lt;/ul&gt;</span></span></code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== RAIO-X DO TEMA ===================== -->
+    <section class="bloco alt" id="tema">
+      <div class="envolve">
+        <div class="cab" data-revela>
+          <span class="olho">P1 · raio-x do tema</span>
+          <h2>Da curiosidade ao portfólio</h2>
+          <p>
+            Tecnologia nova aparece toda semana. O difícil é separar o que é moda do que muda a vida das pessoas.
+            O semestre treina exatamente isso, uma peça de cada vez.
+          </p>
+        </div>
+
+        <ol class="fluxo" aria-label="O caminho do semestre" data-revela>
+          <li><strong>Pesquisa</strong><span>Perguntas certas, fontes confiáveis e IA conferida.</span></li>
+          <li><strong>Seminário</strong><span>A tecnologia explicada para a turma.</span></li>
+          <li><strong>Workshop e debate</strong><span>A turma experimenta e discute os impactos.</span></li>
+          <li><strong>Portfólio</strong><span>Tudo publicado no GitHub Pages.</span></li>
+        </ol>
+
+        <div class="curiosidades">
+          <div class="cartao destaque luz" data-revela>
+            <span class="olho">C1 · futuro do trabalho</span>
+            <span class="numero">170 mi</span>
+            <h3>de vagas novas até 2030</h3>
+            <p>E 92 milhões que deixam de existir. As que mais crescem estão em tecnologia, dados e IA.</p>
+            <p class="fonte">Fonte: <a href="https://www.weforum.org/press/2025/01/future-of-jobs-report-2025-78-million-new-job-opportunities-by-2030-but-urgent-upskilling-needed-to-prepare-workforces/">Fórum Econômico Mundial, Future of Jobs 2025</a>, janeiro de 2025.</p>
+          </div>
+          <div class="cartao luz" data-revela style="--i:1">
+            <span class="olho">C2 · inovar ≠ inventar</span>
+            <h3>A Kodak inventou a câmera digital</h3>
+            <p>Em 1975. E não lançou, porque vendia filme. Inventar é ter a ideia; inovar é levá-la até as pessoas.</p>
+            <p class="fonte">Fonte: <a href="https://spectrum.ieee.org/first-digital-camera-history">IEEE Spectrum</a>.</p>
+          </div>
+          <div class="cartao luz" data-revela style="--i:2">
+            <span class="olho">C3 · tipos</span>
+            <h3>Incremental, radical, disruptiva</h3>
+            <p>Melhorar o que existe, criar algo novo ou mudar as regras do mercado. O streaming contra a locadora é o exemplo clássico do terceiro.</p>
+          </div>
+          <div class="cartao luz" data-revela style="--i:1">
+            <span class="olho">C4 · checa a IA</span>
+            <h3>Seis processos que nunca existiram</h3>
+            <p>Em 2023, advogados nos EUA citaram decisões inventadas pelo ChatGPT e foram multados. Aqui, toda informação da IA ganha uma fonte de verdade.</p>
+            <p class="fonte">Fonte: <a href="https://en.wikipedia.org/wiki/Mata_v._Avianca,_Inc.">Mata v. Avianca</a>, junho de 2023.</p>
+          </div>
+          <div class="cartao luz" data-revela style="--i:2">
+            <span class="olho">C5 · maturidade</span>
+            <h3>Euforia, decepção, uso real</h3>
+            <p>Quase toda tecnologia passa por esse ciclo. Saber em que ponto ela está evita apostar no hype.</p>
+          </div>
+          <div class="cartao inteiro luz" data-revela style="--i:3">
+            <span class="olho">C6 · problema real</span>
+            <h3>Tecnologia a serviço de um desafio de verdade</h3>
+            <p>No 2º bimestre, cada grupo liga a sua tecnologia a um desafio real de uma organização do Sistema Fecomércio: Senac, Sesc ou Fecomércio. E as melhores ideias seguem para virar protótipo no Laboratório de Inovação IV.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FICHA DA DISCIPLINA ===================== -->
+    <section class="bloco faixa" aria-label="Ficha da disciplina">
+      <div class="envolve">
+        <div class="ficha">
+          <div class="cartao" data-revela>
+            <span class="olho">Curso</span>
+            <strong>Análise e Desenvolvimento de Sistemas</strong>
+            <span>Faculdade de Tecnologia e Inovação Senac DF</span>
+          </div>
+          <div class="cartao" data-revela style="--i:1">
+            <span class="olho">Semestre</span>
+            <strong>2º semestre</strong>
+            <span>Quintas, noturno, Taguatinga</span>
+          </div>
+          <div class="cartao" data-revela style="--i:2">
+            <span class="olho">Carga horária</span>
+            <strong>70 horas</strong>
+            <span>60h presenciais e 10h de estudo autônomo</span>
+          </div>
+          <a class="cartao luz" href="/" data-revela style="--i:3">
+            <span class="olho">Professora</span>
+            <strong>Maristela Oliveira</strong>
+            <span>ou só Stela</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EMENTA E OBJETIVOS ===================== -->
+    <section class="bloco alt" id="ementa">
+      <div class="envolve">
+        <div class="cab" data-revela>
+          <span class="olho">E1 · ementa</span>
+          <h2>Estudar o que vem por aí</h2>
+          <p>A ementa oficial, palavra por palavra. O resto do semestre é colocar isso em prática.</p>
+        </div>
+
+        <div class="ementa">
+          <div data-revela>
+            <!-- EDITE AQUI: ementa oficial (copie do plano de ensino, sem mudar) -->
+            <p class="ementa-texto">
+              Estudo de soluções e tecnologias atuais e em projeção. Realização de seminários, workshops ou mesas de
+              debates para apresentação dos temas abordados. Elaboração de portfólio ou coletânea contendo informações
+              sobre as tecnologias estudadas.
+            </p>
+            <div class="palavras" aria-label="Palavras-chave">
+              <span class="etiqueta ouro">Inovação</span>
+              <span class="etiqueta ouro">Tecnologias atuais e emergentes</span>
+              <span class="etiqueta ouro">Seminários</span>
+              <span class="etiqueta ouro">Workshops</span>
+              <span class="etiqueta ouro">Mesas de debate</span>
+              <span class="etiqueta ouro">Portfólio tecnológico</span>
+            </div>
+          </div>
+
+          <div class="janela" data-revela style="--i:1">
+            <div class="janela-barra">
+              <span class="semaforo" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="janela-titulo">objetivos.md</span>
+            </div>
+            <div class="janela-corpo">
+              <h3>Aonde a gente quer chegar</h3>
+              <p class="objetivo-geral">
+                Capacitar os alunos a investigar, analisar e comunicar soluções e tecnologias atuais e em projeção, por
+                meio de seminários, workshops e mesas de debate, consolidando o estudo em um portfólio tecnológico que
+                relacione essas tecnologias a problemas reais de organizações.
+              </p>
+              <ul class="lista-check">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m8 12.5 2.5 2.5L16 9.5"/></svg>Compreender os conceitos de inovação e o cenário das tecnologias atuais e em projeção.</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m8 12.5 2.5 2.5L16 9.5"/></svg>Pesquisar e analisar criticamente soluções tecnológicas, suas aplicações, vantagens e limitações.</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m8 12.5 2.5 2.5L16 9.5"/></svg>Apresentar e debater os temas estudados por meio de seminários, workshops e mesas de debate.</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m8 12.5 2.5 2.5L16 9.5"/></svg>Elaborar um portfólio com informações sobre as tecnologias estudadas.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTEÚDO PROGRAMÁTICO ===================== -->
+    <section class="bloco" id="conteudo">
+      <div class="envolve">
+        <div class="cab" data-revela>
+          <span class="olho">U1–U4 · conteúdo programático</span>
+          <h2>Quatro unidades, um radar</h2>
+          <p>Cada unidade acrescenta uma camada ao portfólio do grupo.</p>
+        </div>
+        <div class="unidades">
+          <div class="cartao unidade" data-revela>
+            <div class="unidade-topo"><span class="olho">Unidade 1</span><span class="etiqueta">aulas 1 e 2</span></div>
+            <h3>Inovação e Tecnologia</h3>
+            <p>Antes da tecnologia, a ideia.</p>
+            <ul><li>Conceitos e tipos de inovação (incremental, radical e disruptiva).</li><li>A 4ª revolução industrial e a transformação digital.</li><li>Criatividade e inovação nas organizações.</li></ul>
+          </div>
+          <div class="cartao unidade" data-revela style="--i:1">
+            <div class="unidade-topo"><span class="olho">Unidade 2</span><span class="etiqueta">aulas 3 a 5 e 10</span></div>
+            <h3>Soluções e Tecnologias Atuais e em Projeção</h3>
+            <p>O que está no radar, e para que serve.</p>
+            <ul><li>Panorama das tecnologias atuais e emergentes.</li><li>Pesquisa orientada, curadoria de fontes e uso crítico da IA na pesquisa.</li><li>Aplicações das tecnologias em problemas reais das organizações.</li></ul>
+          </div>
+          <div class="cartao unidade" data-revela style="--i:2">
+            <div class="unidade-topo"><span class="olho">Unidade 3</span><span class="etiqueta">aulas 7, 8 e 11 a 13</span></div>
+            <h3>Seminários, Workshops e Mesas de Debate</h3>
+            <p>Explicar, ensinar e discutir.</p>
+            <ul><li>Planejamento e apresentação de seminários.</li><li>Condução de workshops práticos sobre as tecnologias estudadas.</li><li>Mesas de debate sobre ética, impactos sociais e futuro do trabalho.</li></ul>
+          </div>
+          <div class="cartao unidade" data-revela style="--i:3">
+            <div class="unidade-topo"><span class="olho">Unidade 4</span><span class="etiqueta">aulas 6, 14 e 15</span></div>
+            <h3>Portfólio de Tecnologias</h3>
+            <p>Tudo publicado, com fonte.</p>
+            <ul><li>Estrutura de um portfólio ou coletânea tecnológica.</li><li>Redação técnica de fichas sobre as tecnologias estudadas.</li><li>Publicação do portfólio em site no GitHub Pages.</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== AULAS ===================== -->
+    <!--
+      EDITE AQUI: uma linha por aula, com a data em data-a (AAAA-MM-DD). Turma única: não precisa de data-b.
+      O aulas.js destaca sozinho a próxima aula. Quando a página da aula existir, coloque o link no título
+      (<a href="aulas/aula-NN.html">) e a etiqueta "abrir a aula →" no fim da linha de datas.
+    -->
+    <section class="bloco alt" id="aulas">
+      <div class="envolve">
+        <div class="cab" data-revela>
+          <span class="olho">A1–A18 · aulas</span>
+          <h2>Dezoito encontros, um plano de negócio</h2>
+          <p>Quintas à noite, em Taguatinga. Alguns encontros juntam duas aulas. A próxima aparece destacada.</p>
+        </div>
+        <ol class="log lista-aulas" data-revela>
+          <li class="commit" data-a="2026-08-13">
+            <div class="commit-linha"><h3><a href="aulas/aula-01.html">Conhecendo o Laboratório de Inovação II</a></h3><span class="hash">A01</span></div>
+            <div class="meta"><span>quinta, 13/08</span> · <span>Apresentação vivencial</span> <a class="etiqueta ouro" href="aulas/aula-01.html">abrir a aula →</a></div>
+          </li>
+          <li class="commit" data-a="2026-08-20">
+            <div class="commit-linha"><h3><a href="aulas/aula-02.html">O que é inovação, afinal?</a></h3><span class="hash">A02</span></div>
+            <div class="meta"><span>quinta, 20/08</span> · <span>Situação-problema</span> <a class="etiqueta ouro" href="aulas/aula-02.html">abrir a aula →</a></div>
+          </li>
+          <li class="commit" data-a="2026-08-27">
+            <div class="commit-linha"><h3><a href="aulas/aula-03.html">Panorama das tecnologias atuais e em projeção</a></h3><span class="hash">A03</span></div>
+            <div class="meta"><span>quinta, 27/08</span> · <span>Pesquisa e seminário</span> <a class="etiqueta ouro" href="aulas/aula-03.html">abrir a aula →</a></div>
+          </li>
+          <li class="commit" data-a="2026-09-03">
+            <div class="commit-linha"><h3><a href="aulas/aula-04.html">Pesquisa orientada e uso crítico da IA</a></h3><span class="hash">A04</span></div>
+            <div class="meta"><span>quinta, 03/09</span> · <span>Laboratório de práticas</span> <a class="etiqueta ouro" href="aulas/aula-04.html">abrir a aula →</a></div>
+          </li>
+          <li class="commit" data-a="2026-09-10">
+            <div class="commit-linha"><h3><a href="aulas/aula-05.html">Workshop modelo: IA generativa e agentes de IA</a></h3><span class="hash">A05</span></div>
+            <div class="meta"><span>quinta, 10/09</span> · <span>Laboratório de práticas</span> <a class="etiqueta ouro" href="aulas/aula-05.html">abrir a aula →</a></div>
+          </li>
+          <li class="commit" data-a="2026-09-17">
+            <div class="commit-linha"><h3><a href="aulas/aula-06.html">Oficina de portfólio no GitHub Pages</a></h3><span class="hash">A06</span></div>
+            <div class="meta"><span>quinta, 17/09</span> · <span>Laboratório de práticas</span> <a class="etiqueta ouro" href="aulas/aula-06.html">abrir a aula →</a></div>
+          </li>
+          <li class="commit" data-a="2026-09-24">
+            <div class="commit-linha"><h3><a href="aulas/aula-07.html">Seminários: rodada 1</a></h3><span class="hash">A07</span></div>
+            <div class="meta"><span>quinta, 24/09</span> · <span>Pesquisa e seminário</span> <a class="etiqueta ouro" href="aulas/aula-07.html">abrir a aula →</a></div>
+          </li>
+          <li class="commit" data-a="2026-10-01">
+            <div class="commit-linha"><h3><a href="aulas/aula-08.html">Seminários: rodada 2</a></h3><span class="hash">A08</span></div>
+            <div class="meta"><span>quinta, 01/10</span> · <span>Pesquisa e seminário</span> <a class="etiqueta ouro" href="aulas/aula-08.html">abrir a aula →</a></div>
+          </li>
+          <li class="commit" data-a="2026-10-08">
+            <div class="commit-linha"><h3>Entrega do 1º bimestre: registro no Loop e no README.md</h3><span class="hash">A09</span></div>
+            <div class="meta"><span>quinta, 08/10</span> · <span>Amostra de trabalho</span></div>
+          </li>
+          <li class="commit" data-a="2026-10-22">
+            <div class="commit-linha"><h3>Da tecnologia ao problema real</h3><span class="hash">A10</span></div>
+            <div class="meta"><span>quinta, 22/10</span> · <span>Situação-problema</span></div>
+          </li>
+          <li class="commit" data-a="2026-10-29">
+            <div class="commit-linha"><h3>Mesa de debate: ética, IA e sociedade</h3><span class="hash">A11</span></div>
+            <div class="meta"><span>quinta, 29/10</span> · <span>Mesa de debate</span></div>
+          </li>
+          <li class="commit" data-a="2026-11-05">
+            <div class="commit-linha"><h3>Workshops dos grupos</h3><span class="hash">A12</span></div>
+            <div class="meta"><span>quinta, 05/11</span> · <span>Workshop</span></div>
+          </li>
+          <li class="commit" data-a="2026-11-12">
+            <div class="commit-linha"><h3>Mesa de debate: o futuro do trabalho em TI</h3><span class="hash">A13</span></div>
+            <div class="meta"><span>quinta, 12/11</span> · <span>Mesa de debate</span></div>
+          </li>
+          <li class="commit" data-a="2026-11-19">
+            <div class="commit-linha"><h3>Fichas técnicas do portfólio</h3><span class="hash">A14</span></div>
+            <div class="meta"><span>quinta, 19/11</span> · <span>Laboratório de práticas</span> · <span>com a aula 15</span></div>
+          </li>
+          <li class="commit" data-a="2026-11-19">
+            <div class="commit-linha"><h3>Publicação do portfólio e ensaio da apresentação</h3><span class="hash">A15</span></div>
+            <div class="meta"><span>quinta, 19/11</span> · <span>Laboratório de práticas</span> · <span>com a aula 14</span></div>
+          </li>
+          <li class="commit" data-a="2026-11-26">
+            <div class="commit-linha"><h3>Apresentação final do Radar de Tecnologias</h3><span class="hash">A16</span></div>
+            <div class="meta"><span>quinta, 26/11</span> · <span>Exposição prática</span></div>
+          </li>
+          <li class="commit" data-a="2026-12-03">
+            <div class="commit-linha"><h3>Devolutiva, recuperação de entregas e portfólio no GitHub</h3><span class="hash">A17</span></div>
+            <div class="meta"><span>quinta, 03/12</span> · <span>Devolutiva</span></div>
+          </li>
+          <li class="commit" data-a="2026-12-10">
+            <div class="commit-linha"><h3>Recuperação final e encerramento</h3><span class="hash">A18</span></div>
+            <div class="meta"><span>quinta, 10/12</span> · <span>Encerramento</span></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== COMO AS AULAS FUNCIONAM ===================== -->
+    <section class="bloco" id="metodo">
+      <div class="envolve">
+        <div class="cab" data-revela>
+          <span class="olho">M1 · metodologia</span>
+          <h2>Pesquisar, mostrar, debater, publicar</h2>
+        </div>
+        <div class="metodo">
+          <div class="texto" data-revela>
+            <p>
+              Cada grupo investiga uma tecnologia ao longo do semestre: pesquisa orientada, seminário, workshop
+              conduzido pelo próprio grupo, mesas de debate sobre ética e futuro do trabalho e, no fim, o portfólio
+              publicado no GitHub Pages. Toda aula tem um estudo de caso.
+            </p>
+            <p>
+              A IA entra com senso crítico: o Copilot do Microsoft 365 ajuda na pesquisa e na escrita, e toda
+              informação é checada numa fonte de verdade. O estudo autônomo (10h) é um curso introdutório da NetAcad
+              ligado à tecnologia do grupo e a ficha técnica individual.
+            </p>
+            <p class="citacao">Curto-circuito? A fonte confirma, a IA sugere.</p>
+          </div>
+          <div class="janela" data-revela style="--i:1">
+            <div class="janela-barra">
+              <span class="semaforo" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="janela-titulo">ferramentas</span>
+            </div>
+            <div class="janela-corpo">
+              <p class="prompt" aria-hidden="true"><b>stela@placa</b> <span>~/lab2</span> $ ls ferramentas/</p>
+              <div class="ferramentas">
+                <span class="etiqueta"><span class="tec" title="GitHub"><img src="assets/img/tec/github.svg" alt="" width="32" height="32"></span>GitHub Pages</span>
+                <span class="etiqueta"><span class="tec" title="VS Code"><img src="assets/img/tec/vscode.svg" alt="" width="32" height="32"></span>VS Code</span>
+                <span class="etiqueta"><span class="tec" title="Azure"><img src="assets/img/tec/azure.svg" alt="" width="32" height="32"></span>Microsoft Learn</span>
+                <span class="etiqueta">NetAcad</span>
+                <span class="etiqueta">Copilot do Microsoft 365</span>
+                <span class="etiqueta">Teams, Loop e Whiteboard</span>
+                <span class="etiqueta"><span class="tec" title="Moodle"><img src="assets/img/tec/moodle.svg" alt="" width="32" height="32"></span>Moodle</span>
+                <span class="etiqueta verde">IA checada na fonte</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== AVALIAÇÃO ===================== -->
+    <section class="bloco alt" id="avaliacao">
+      <div class="envolve">
+        <div class="cab" data-revela>
+          <span class="olho">A1 · avaliação</span>
+          <h2>Como a nota é montada</h2>
+          <p>Dez pontos por bimestre. Aqui não tem prova: a nota vem do Radar.</p>
+        </div>
+        <div class="avaliacao">
+          <div class="cartao" data-revela>
+            <span class="olho">1º bimestre</span>
+            <h3>10 pontos</h3>
+            <div class="pontos" aria-hidden="true"><span style="--pts:4"></span><span style="--pts:6"></span></div>
+            <ul class="partes">
+              <li><span>Seminários (atividade avaliativa prática)</span><strong>4,0</strong></li>
+              <li><span>Entregas com explicação no Loop e no README.md</span><strong>6,0</strong></li>
+            </ul>
+          </div>
+          <div class="cartao" data-revela style="--i:1">
+            <span class="olho">2º bimestre</span>
+            <h3>10 pontos</h3>
+            <div class="pontos" aria-hidden="true"><span style="--pts:7"></span><span style="--pts:2"></span><span style="--pts:1"></span></div>
+            <ul class="partes">
+              <li><span>Apresentação final do Radar de Tecnologias</span><strong>7,0</strong></li>
+              <li><span>Avaliação Integrada</span><strong>2,0</strong></li>
+              <li><span>Participação na Jornada Interdisciplinar</span><strong>1,0</strong></li>
+            </ul>
+          </div>
+        </div>
+        <p class="aprovacao" data-revela>Para ser aprovado: média final de 6,0 e pelo menos 75% de frequência.</p>
+      </div>
+    </section>
+
+    <!-- ===================== BIBLIOGRAFIA ===================== -->
+    <section class="bloco" id="bibliografia">
+      <div class="envolve">
+        <div class="cab" data-revela>
+          <span class="olho">B1 · bibliografia</span>
+          <h2>Para ir além da aula</h2>
+        </div>
+        <div class="biblio">
+          <div class="cartao" data-revela>
+            <span class="olho">Básica</span>
+            <ol>
+              <li><strong>Gestão do amanhã</strong>MAGALDI, Sandro. Gestão do amanhã: tudo o que você precisa saber sobre gestão, inovação e liderança para vencer na 4ª revolução industrial. São Paulo, 2018.</li>
+              <li><strong>Inovação com resultado</strong>KOULOPOULOS, Thomas M. Inovação com resultado: o olhar além do óbvio. São Paulo: Gente; Senac SP, 2011.</li>
+              <li><strong>Criatividade e inovação</strong>PEARSON, Biblioteca Universitária. Criatividade e inovação. São Paulo: Pearson, 2011.</li>
+            </ol>
+          </div>
+          <div class="cartao" data-revela style="--i:1">
+            <span class="olho">Complementar</span>
+            <ol>
+              <li><strong>As regras da inovação</strong>DAVILA, Tony. Porto Alegre: Bookman, 2007.</li>
+              <li><strong>A bíblia da inovação</strong>TRÍAS DE BES, Fernando; KOTLER, Philip. São Paulo: Leya, 2011.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== RODAPÉ ===================== -->
+  <footer class="rodape">
+    <div class="envolve">
+      <div class="rodape-grade">
+        <div class="rodape-marca">
+          <img src="assets/img/coracao.webp" alt="" width="40" height="38">
+          <strong>Laboratório de Inovação II</strong>
+          <span>Uma disciplina do curso de ADS da Faculdade de Tecnologia e Inovação Senac DF, em Taguatinga.</span>
+        </div>
+        <nav aria-label="Nesta disciplina">
+          <h2>Nesta disciplina</h2>
+          <ul>
+            <li><a href="#tema">O Radar de Tecnologias</a></li>
+            <li><a href="#ementa">Ementa e objetivos</a></li>
+            <li><a href="#aulas">Aulas</a></li>
+            <li><a href="#avaliacao">Avaliação</a></li>
+            <li><a href="#bibliografia">Bibliografia</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Outras disciplinas">
+          <h2>Outras disciplinas</h2>
+          <ul>
+            <li><a href="/prog-web-js/">Programação Web em JavaScript</a></li>
+            <li><a href="/prog-web-php/">Web II: PHP</a></li>
+            <li><a href="/lab-inovacao-3/">Laboratório de Inovação III</a></li>
+            <li><a href="/lab-inovacao-4/">Laboratório de Inovação IV</a></li>
+            <li><a href="/Python-Logica/">Lógica de Programação com Python</a></li>
+            <li><a href="/seguranca-nuvem/">Segurança em Nuvem</a></li>
+            <li><a href="/arc/">Administração de Recursos Computacionais</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Professora">
+          <h2>Professora</h2>
+          <ul>
+            <li><a href="/">Portal da Stela</a></li>
+            <li><a href="/#cursos">Cursos e turmas</a></li>
+            <li><a href="/#neuro">Neurodiversidade</a></li>
+            <li><a href="/#contato">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="rodape-fim">
+        <span>Feito com ♥ e sucata eletrônica.</span>
+        <span>radar.ligar("curiosidade")</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/aulas.js"></script>
+  <script src="assets/js/matrix.js"></script>
+</body>
+</html>
