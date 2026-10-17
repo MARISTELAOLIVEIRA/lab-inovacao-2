@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="titulo descricao">
+  <title id="titulo">Laboratório de Inovação II · Radar de Tecnologias · Profa. Maristela · Senac DF</title>
+  <desc id="descricao">Banner: o título em ciano e magenta, ao lado de uma tela de radar que varre as tecnologias do semestre: IA generativa, nuvem, IoT, cibersegurança, blockchain, low-code e realidade estendida.</desc>
+
+  <defs>
+    <!-- Brilhos do fundo: ciano à esquerda, magenta à direita -->
+    <radialGradient id="brilhoCiano" cx="6%" cy="15%" r="65%">
+      <stop offset="0" stop-color="#22D3EE" stop-opacity=".40"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="brilhoMagenta" cx="92%" cy="110%" r="55%">
+      <stop offset="0" stop-color="#FF4FD8" stop-opacity=".25"/>
+      <stop offset="1" stop-color="#FF4FD8" stop-opacity="0"/>
+    </radialGradient>
+    <!-- A varredura do radar: um leque que some aos poucos -->
+    <linearGradient id="varredura" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22D3EE" stop-opacity="0"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity=".45"/>
+    </linearGradient>
+    <pattern id="placa" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M0 30 H22 L30 22 V0 M60 40 H42 L36 46 V60" fill="none" stroke="#22D3EE" stroke-opacity=".07" stroke-width="2"/>
+      <circle cx="30" cy="22" r="3" fill="#22D3EE" fill-opacity=".1"/>
+      <circle cx="36" cy="46" r="3" fill="#22D3EE" fill-opacity=".1"/>
+    </pattern>
+    <filter id="neon" x="-20%" y="-50%" width="140%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="borrado"/>
+      <feMerge><feMergeNode in="borrado"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="pontinho" x="-200%" y="-200%" width="500%" height="500%">
+      <feGaussianBlur stdDeviation="3" result="borrado"/>
+      <feMerge><feMergeNode in="borrado"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Fundo -->
+  <rect width="1200" height="360" rx="18" fill="#0B1322"/>
+  <rect width="1200" height="360" rx="18" fill="url(#placa)"/>
+  <rect width="1200" height="360" rx="18" fill="url(#brilhoCiano)"/>
+  <rect width="1200" height="360" rx="18" fill="url(#brilhoMagenta)"/>
+
+  <!-- Título -->
+  <g font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+    <text x="64" y="88" font-size="21" fill="#9FB3C8" letter-spacing="3">ADS · 2º SEMESTRE · SENAC DF</text>
+    <text x="62" y="158" font-size="66" font-weight="800" fill="#22D3EE" filter="url(#neon)">Radar de</text>
+    <text x="62" y="228" font-size="66" font-weight="800" fill="#FF7BE3" filter="url(#neon)">Tecnologias</text>
+    <text x="64" y="276" font-size="22" fill="#E2E8F0">Laboratório de Inovação II: pesquisar, mostrar,</text>
+    <text x="64" y="306" font-size="22" fill="#E2E8F0">debater e publicar o que está mudando o mundo.</text>
+  </g>
+
+  <!-- Janela do radar -->
+  <g transform="translate(660 40)">
+    <rect width="480" height="280" rx="12" fill="#07101C" stroke="#1F3A4D" stroke-width="2"/>
+    <rect width="480" height="38" rx="12" fill="#112232"/>
+    <rect y="26" width="480" height="12" fill="#112232"/>
+    <circle cx="22" cy="19" r="7" fill="#FF5F57"/>
+    <circle cx="44" cy="19" r="7" fill="#FEBC2E"/>
+    <circle cx="66" cy="19" r="7" fill="#28C840"/>
+    <text x="240" y="25" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="15" fill="#9FB3C8">radar.ligar("curiosidade")</text>
+
+    <!-- Tela redonda -->
+    <g transform="translate(140 160)">
+      <circle r="100" fill="#0A1A26" stroke="#22D3EE" stroke-width="2.5"/>
+      <g fill="none" stroke="#22D3EE" stroke-opacity=".35" stroke-width="1.5">
+        <circle r="67"/>
+        <circle r="34"/>
+        <path d="M-100 0 H100 M0 -100 V100"/>
+      </g>
+      <!-- Leque da varredura (entre -60° e 0°) e o braço -->
+      <path d="M0 0 L50 -86.6 A100 100 0 0 1 100 0 Z" fill="url(#varredura)"/>
+      <path d="M0 0 L100 0" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+      <!-- As tecnologias, como pontinhos no radar -->
+      <g fill="#FF4FD8" filter="url(#pontinho)">
+        <circle cx="62" cy="-38" r="5"/>
+        <circle cx="-48" cy="-55" r="4.5"/>
+        <circle cx="30" cy="62" r="4.5"/>
+        <circle cx="-70" cy="28" r="4"/>
+      </g>
+      <g fill="#22D3EE" filter="url(#pontinho)">
+        <circle cx="22" cy="-22" r="4"/>
+        <circle cx="-20" cy="40" r="3.5"/>
+        <circle cx="80" cy="30" r="3.5"/>
+      </g>
+      <circle r="4" fill="#FFFFFF"/>
+    </g>
+
+    <!-- Legenda: o que o radar encontrou -->
+    <g font-family="Consolas, 'Courier New', monospace" font-size="15">
+      <text x="264" y="74" fill="#9FB3C8">$ radar --scan</text>
+      <text x="264" y="104" fill="#FF7BE3">● IA generativa</text>
+      <text x="264" y="130" fill="#FF7BE3">● nuvem</text>
+      <text x="264" y="156" fill="#FF7BE3">● IoT</text>
+      <text x="264" y="182" fill="#FF7BE3">● cibersegurança</text>
+      <text x="264" y="208" fill="#22D3EE">● blockchain</text>
+      <text x="264" y="234" fill="#22D3EE">● low-code</text>
+      <text x="264" y="260" fill="#22D3EE">● realidade estendida</text>
+    </g>
+  </g>
+</svg>
