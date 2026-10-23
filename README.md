@@ -106,7 +106,7 @@ Quatro unidades, um radar. Cada unidade acrescenta uma camada ao portfólio do g
 
 | Ferramenta | Para quê |
 |---|---|
-| 🐙 **GitHub Pages** | Publicar o portfólio do grupo, o Radar de Tecnologias. |
+| <img src="https://maristelaoliveira.github.io/assets/img/octocat-stela.webp" width="22" height="22" alt="Octocat da Stela" align="absmiddle"> **GitHub Pages** | Publicar o portfólio do grupo, o Radar de Tecnologias. |
 | 💻 **VS Code** | Editar os arquivos do portfólio. |
 | 📘 **Microsoft Learn** | Trilhas para estudar a tecnologia do grupo. |
 | 🎓 **NetAcad** | O curso introdutório do estudo autônomo, ligado à tecnologia do grupo. |
